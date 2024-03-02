@@ -1,5 +1,3 @@
-align-cases = true
-align-constructors-decl = true
 break-cases = all
 break-infix = fit-or-vertical
 break-separators = before
@@ -14,3 +12,4 @@ let-and = sparse
 single-case = sparse
 type-decl = sparse
 wrap-fun-args = false
+module-item-spacing = sparse

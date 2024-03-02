@@ -172,10 +172,9 @@ module Make (T : Ojs.T) : S with type t = T.t = struct
 
     let rec at key_path (decode : 'a decoder) =
       match key_path with
-      | [ key ]       -> field key decode
+      | [ key ] -> field key decode
       | first :: rest -> field first (at rest decode)
-      | []            ->
-        invalid_arg "Expected key_path to contain at least one element"
+      | [] -> invalid_arg "Expected key_path to contain at least one element"
 
     let try_optional decode t =
       try Some (decode t) with
@@ -187,7 +186,7 @@ module Make (T : Ojs.T) : S with type t = T.t = struct
 
     let any decoders t =
       let rec inner errors = function
-        | []             ->
+        | [] ->
           let rev_errors = List.rev errors in
           decode_error
             ("Value was not able to be decoded with the given decoders. \
@@ -224,7 +223,7 @@ module Make (T : Ojs.T) : S with type t = T.t = struct
     let char c : t = string (String.make 1 c)
 
     let nullable encode = function
-      | None   -> null
+      | None -> null
       | Some v -> encode v
 
     let array encode a : t =

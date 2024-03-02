@@ -149,31 +149,31 @@ module Tests (J : Jsonoo.S) = struct
       let value =
         let open J.Encode in
         function
-        | Float  -> float 1.23
-        | Int    -> int 23
+        | Float -> float 1.23
+        | Int -> int 23
         | String -> string "test"
-        | Null   -> null
-        | Array  -> array id [||]
+        | Null -> null
+        | Array -> array id [||]
         | Object -> object_ []
-        | Bool   -> bool true
-        | Char   -> char 'a'
+        | Bool -> bool true
+        | Char -> char 'a'
 
       let label = function
-        | Float  -> "float"
-        | Int    -> "int"
+        | Float -> "float"
+        | Int -> "int"
         | String -> "string"
-        | Null   -> "null"
-        | Array  -> "array"
+        | Null -> "null"
+        | Array -> "array"
         | Object -> "object"
-        | Bool   -> "bool"
-        | Char   -> "char"
+        | Bool -> "bool"
+        | Char -> "char"
 
       let throws decode types =
         let test t =
           let label = label t ^ " exception not raised" in
           match ignore (decode (value t)) with
           | exception J.Decode_error _ -> assert_true ~label true
-          | _                          -> assert_true ~label false
+          | _ -> assert_true ~label false
         in
         List.iter test types
     end

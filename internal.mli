@@ -17,7 +17,7 @@ module Json (T : Ojs.T) : sig
     -> ?spaces:int
     -> unit
     -> string
-    [@@js.global]
+  [@@js.global]
 end
 [@@js.scope "JSON"]
 
