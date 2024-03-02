@@ -24,7 +24,6 @@
   (ocaml
    (>= 4.08))
   js_of_ocaml
-  js_of_ocaml-ppx
   (gen_js_api
    (>= 1.0.8))
   (webtest :with-test)
