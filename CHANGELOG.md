@@ -1,4 +1,4 @@
-## Unreleased
+## v0.3.0
 
 - Change internal representation to `Ojs.t` and make `Jsonoo.t` abstract.
 - Add a `Make` functor to create modules with a custom type representation.
