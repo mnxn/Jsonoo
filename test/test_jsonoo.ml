@@ -562,7 +562,7 @@ module Tests (J : Jsonoo.S) = struct
       assert_raises
         ~label:"empty list of keys should raise Invalid_argument"
         (Invalid_argument "Expected key_path to contain at least one element")
-        (fun () -> ignore @@ (at []) int);
+        (fun () -> ignore @@ at [] int (J.try_parse_exn {| {} |}));
 
       Test.throws
         (at [ "foo"; "bar" ] int)
