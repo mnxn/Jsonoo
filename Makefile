@@ -14,9 +14,3 @@ clean:
 test:
 	dune test
 .PHONY: test
-
-doc:
-	dune build @doc
-	rm -rf ./docs
-	cp -R ./_build/default/_doc/_html ./docs
-.PHONY: doc

@@ -5,6 +5,7 @@ maintainer: ["Max Lantas <mnxndev@outlook.com>"]
 authors: ["Max Lantas <mnxndev@outlook.com>"]
 license: "MIT"
 homepage: "https://github.com/mnxn/jsonoo"
+doc: "https://mnxn.github.io/jsonoo/"
 bug-reports: "https://github.com/mnxn/jsonoo/issues"
 depends: [
   "dune" {>= "2.7"}

@@ -11,6 +11,8 @@
 (source
  (github mnxn/jsonoo))
 
+(documentation https://mnxn.github.io/jsonoo/)
+
 (generate_opam_files true)
 
 (implicit_transitive_deps false)
